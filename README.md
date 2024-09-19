@@ -29,11 +29,4 @@ The core of this project is based on the **ResNet-50** model architecture, which
    - Since age estimation is a **regression task**, the final fully connected layer of the ResNet-50 is replaced with a single neuron that outputs a continuous value (the predicted age). 
    - In the original ResNet-50, the final layer outputs probabilities across multiple classes (for classification tasks). Here, we modify it to predict a single numeric value representing age.
 
-4. **Flow of the Model**:
-   - **Input**: Facial image input (typically resized to 224x224 pixels).
-   - **Convolutional Layers**: These layers extract low-level features such as edges and textures.
-   - **Residual Blocks**: Throughout the network, residual blocks allow the model to skip certain layers, improving learning efficiency in deep networks.
-   - **Global Average Pooling**: The output features are aggregated using global average pooling, reducing dimensionality.
-   - **Fully Connected Layer**: A final fully connected layer outputs a single value, which is the predicted age.
-
 This architecture allows the model to efficiently learn facial features and estimate a person’s age from an image.
